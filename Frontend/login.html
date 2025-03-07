@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login">
+        <h1>Login!</h1>
+        <form action="" class="form" method="post" onsubmit="return validateLogin()">
+            <div class="input-field">
+                <label for="Username">Username : </label>
+                <input type="text" name="Username" id="Username">
+            </div>
+            <div class="input-field">
+                <label for="Password">Password : </label>
+                <input type="password" name="Password" id="Password">
+            </div>
+            <div class="ontoRegister">
+                <!-- <span><input type="checkbox" name="Remember Me" id="Remember Me">Remember Me</span> -->
+                <span>Visiting for the first time ? <a href="register.html">Register Here</a></span>
+            </div>
+            <div class="submitSection">
+                <input type="submit" value="Login" class="btn">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            let enteredUsername = document.getElementById("Username").value;
+            let enteredPassword = document.getElementById("Password").value;
+    
+            let storedUser = JSON.parse(localStorage.getItem("user"));
+    
+            if (storedUser) {
+
+                if (enteredUsername === storedUser.username && enteredPassword === storedUser.password) {
+                    alert("Login successful!");
+                    
+                    window.location.href = "mainPage.html";
+                    
+                    return false;
+                } else {
+                    alert("Invalid username or password!");
+                    return false; 
+                }
+            } else {
+                alert("No user found! Please create an account.");
+                return false; 
+            }
+        }
+    </script>
+
+</body>
+</html>
