@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1741339502793,
+    "title": "clothing",
+    "author": "balreet",
+    "content": "clothing for personality development",
+    "likes": 1,
+    "dislikes": 0,
+    "comments": [
+      {
+        "user": "Anonymous",
+        "text": "hello"
+      }
+    ],
+    "date": "2025-03-07T09:25:02.793Z"
+  },
+  {
+    "id": 1741344682768,
+    "title": "clothing",
+    "author": "balreet",
+    "content": "clothing is important",
+    "likes": 0,
+    "dislikes": 0,
+    "comments": [],
+    "date": "2025-03-07T10:51:22.768Z"
+  }
+]
